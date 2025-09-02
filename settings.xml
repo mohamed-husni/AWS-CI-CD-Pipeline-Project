@@ -1,0 +1,7 @@
+<servers>
+  <server>
+    <id>ccd-project-Java-maven-webapp</id>
+    <username>aws</username>
+    <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+  </server>
+</servers>

@@ -73,10 +73,13 @@ GitHub → CodeBuild → S3 → CodeDeploy → EC2 → Live App
 
 🖼️ Deployment Screenshots
 ✅ CodeBuild Success
+<img width="1920" height="1020" alt="Screenshot 2025-09-02 131625" src="https://github.com/user-attachments/assets/c3777be2-aad2-4e5c-9dbe-06b4692b794f" />
 
 ✅ CodeDeploy Success
+<img width="1920" height="1020" alt="Screenshot 2025-09-03 231830" src="https://github.com/user-attachments/assets/f69373d6-27ac-4fd3-ac36-b1645d7dad8b" />
 
 ✅ CloudFormation Stack
+<img width="1920" height="1020" alt="Screenshot 2025-09-03 122112" src="https://github.com/user-attachments/assets/d0ca60af-ed04-408e-9773-e7becd4213ac" />
 
 ✅ Pipeline Success
 <img width="1920" height="1020" alt="Screenshot 2025-09-04 003358" src="https://github.com/user-attachments/assets/26c661ac-41c7-4764-b37a-4c6e49a0e009" />

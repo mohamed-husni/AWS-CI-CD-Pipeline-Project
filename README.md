@@ -26,13 +26,38 @@ It uses **GitHub → AWS CodeBuild → CodeDeploy → CodePipeline** to automate
 
 ---
 
-## 📂 Project Structure
-aws-cicd-pipeline/
-├─ app/ # Java Maven web application
-├─ appspec.yml # CodeDeploy specification
-├─ buildspec.yml # CodeBuild specification
-├─ scripts/ # Deployment scripts
-├─ README.md
+🚀 Project Workflow
+
+Source Stage
+Code is pulled from GitHub repository.
+Build Stage
+AWS CodeBuild compiles the project using Maven.
+Generates the application artifact (.jar).
+Deploy Stage
+AWS CodeDeploy deploys the artifact to the EC2 instance created via CloudFormation.
+The application is configured to run as a systemd service.
+Infrastructure as Code (IaC)
+The EC2 instance, VPC, Security Groups, IAM Roles, and Networking are provisioned via CloudFormation.
+Pipeline Automation
+AWS CodePipeline automates the entire workflow from commit → build → deploy.
+
+📦 Tech Stack
+
+AWS CodePipeline – Orchestration
+
+AWS CodeBuild – Build automation (Maven)
+
+AWS CodeDeploy – Deployment automation
+
+AWS CloudFormation – Infrastructure provisioning
+
+EC2 (Ubuntu) – Hosting environment
+
+Java 8 (Amazon Corretto) – Runtime
+
+Maven – Build tool
+
+GitHub – Source control
 
 ## ⚙️ Setup & Deployment
 1. **Push code** to GitHub → triggers pipeline automatically.
@@ -46,6 +71,15 @@ aws-cicd-pipeline/
 GitHub → CodeBuild → S3 → CodeDeploy → EC2 → Live App
 
 
+🖼️ Deployment Screenshots
+✅ CodeBuild Success
+
+✅ CodeDeploy Success
+
+✅ CloudFormation Stack
+
+✅ Pipeline Success
+<img width="1920" height="1020" alt="Screenshot 2025-09-04 003358" src="https://github.com/user-attachments/assets/26c661ac-41c7-4764-b37a-4c6e49a0e009" />
 
 ## 🔒 IAM Permissions
 - **CodeBuild**: Access to S3 (read/write artifacts).  
